@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <title>Тестовый шаблон для подключения модальных окон</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+		<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+		<!-- Fancybox -->
+    <link rel="stylesheet" href="js/jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.css" type="text/css"
+          media="screen"/>
+    <script type="text/javascript" src="js/jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <!-- ENDS Fancybox -->
+		<script type="text/javascript">
+var cookieName = 'check';
+var cookieValue = 'true';
+var сookieExist = 1000*60; // кука на одну минуту
+var checkCookie = document.cookie;
+if(checkCookie.indexOf(cookieName)==-1) {
+//тут вызов функции модального окна с контентом
+function start() {
+jQuery("#hidden_a").trigger("click");
+}
+$(document).ready(function(){
+    if ('function' != typeof jQuery.fancybox) return true;
+    jQuery("#hidden_a").fancybox({
+        'hideOnOverlayClick':false,
+        'hideOnContentClick': false,
+        'titleShow'  : false
+    });
+    setTimeout(start, 5000);   //окно вызывается через пять секунд автоматически
+});
+//устанавливается новое время после вызова окна
+    var exp = new Date();
+    exp.setTime(exp.getTime() + сookieExist);
+    document.cookie = cookieName + "=" + cookieValue + "; expires=" + exp.toGMTString();
+}
+</script>
+</head>
+<body>
+<a href="#inline1" style="display:none;" id="hidden_a"></a>
+<div style="display: none;">
+<div id="inline1" style="width:600px; height:250px; overflow:auto;">
+           тут контент
+</div>
+</div>
+</body>
+</html>

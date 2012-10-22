@@ -1,0 +1,54 @@
+/*html {
+	padding: 100px 0 50px;
+    background: url('../../../img/bg/bg.jpg') #fff;
+}*/
+.galleryContainer {
+    width: 1024px;
+
+    /*height: 800px;
+  position: relative;
+  margin: 0 auto;;*/
+
+}
+
+.galleryImage {
+    position: relative;
+    background-color: #F5F5F5;
+    width: 230px;
+    height: 240px;
+    overflow: hidden;
+    margin: 0px;
+    float: left;
+}
+
+.info {
+    position: relative;
+    margin-left: 10px;
+    font: normal 14px/1.3 'Segoe UI', Arial, sans-serif;
+    padding: 3px;
+}
+
+.info h3 {
+    position: relative;
+    color: #444648;
+    margin: 2px;
+    margin-top: 10px
+}
+
+.info p {
+    position: relative;
+    color: #27333F;
+    margin: 2px
+}
+
+.info p a {
+    position: relative;
+    color: orangered;
+}
+
+.clear {
+    position: relative;
+    clear: both;
+    margin-top: 10px;
+}
+

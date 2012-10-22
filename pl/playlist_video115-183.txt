@@ -1,0 +1,3 @@
+{"playlist":[
+{"comment":"Цена вопроса (репортаж об ИЭУП)","file":"http://cdokazan.tw1.ru/video_ieml/cena_voprosa.flv"},
+{"comment":"Презентация нового здания на Зайцева, 17.","file":"/video_ieml/IEML_Zaiceva_15.flv"}]}
